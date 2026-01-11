@@ -28,6 +28,11 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/testimonials", testimonialRoutes);
 app.use("/api/auth", authRoutes);
 
+// health check
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // test route
 app.get("/", (req, res) => {
   res.json({ message: "Portfolio Backend is running" });
