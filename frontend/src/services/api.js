@@ -1,13 +1,21 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+// ===============================
+// API BASE CONFIG
+// ===============================
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
 
-// Helper function to get auth token
+// ===============================
+// AUTH TOKEN HELPER
+// ===============================
 const getAuthToken = () => {
   return localStorage.getItem("adminToken");
 };
 
-// Helper function for API calls
+// ===============================
+// GENERIC API CALL
+// ===============================
 const apiCall = async (endpoint, options = {}) => {
   const token = getAuthToken();
+
   const headers = {
     "Content-Type": "application/json",
     ...options.headers,
@@ -23,14 +31,18 @@ const apiCall = async (endpoint, options = {}) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
   return response.json();
 };
 
-// Projects API
+// ===============================
+// PROJECTS API
+// ===============================
 export const fetchProjects = async () => {
   return apiCall("/projects");
 };
@@ -41,15 +53,19 @@ export const fetchProject = async (id) => {
 
 export const createProject = async (projectData) => {
   const formData = new FormData();
+
   Object.keys(projectData).forEach((key) => {
     if (key === "technologies" && Array.isArray(projectData[key])) {
-      projectData[key].forEach((tech) => formData.append("technologies", tech));
+      projectData[key].forEach((tech) =>
+        formData.append("technologies", tech)
+      );
     } else if (projectData[key] !== null && projectData[key] !== undefined) {
       formData.append(key, projectData[key]);
     }
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/projects`, {
     method: "POST",
     headers: {
@@ -59,7 +75,9 @@ export const createProject = async (projectData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -68,15 +86,19 @@ export const createProject = async (projectData) => {
 
 export const updateProject = async (id, projectData) => {
   const formData = new FormData();
+
   Object.keys(projectData).forEach((key) => {
     if (key === "technologies" && Array.isArray(projectData[key])) {
-      projectData[key].forEach((tech) => formData.append("technologies", tech));
+      projectData[key].forEach((tech) =>
+        formData.append("technologies", tech)
+      );
     } else if (projectData[key] !== null && projectData[key] !== undefined) {
       formData.append(key, projectData[key]);
     }
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/projects/${id}`, {
     method: "PUT",
     headers: {
@@ -86,7 +108,9 @@ export const updateProject = async (id, projectData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -97,20 +121,11 @@ export const deleteProject = async (id) => {
   return apiCall(`/projects/${id}`, { method: "DELETE" });
 };
 
-// Services API
+// ===============================
+// SERVICES API
+// ===============================
 export const fetchServices = async () => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/services`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log("fetchServices response:", data);
-    return data;
-  } catch (error) {
-    console.error("fetchServices error:", error);
-    throw error;
-  }
+  return apiCall("/services");
 };
 
 export const fetchService = async (id) => {
@@ -119,6 +134,7 @@ export const fetchService = async (id) => {
 
 export const createService = async (serviceData) => {
   const formData = new FormData();
+
   Object.keys(serviceData).forEach((key) => {
     if (serviceData[key] !== null && serviceData[key] !== undefined) {
       formData.append(key, serviceData[key]);
@@ -126,6 +142,7 @@ export const createService = async (serviceData) => {
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/services`, {
     method: "POST",
     headers: {
@@ -135,7 +152,9 @@ export const createService = async (serviceData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -144,6 +163,7 @@ export const createService = async (serviceData) => {
 
 export const updateService = async (id, serviceData) => {
   const formData = new FormData();
+
   Object.keys(serviceData).forEach((key) => {
     if (serviceData[key] !== null && serviceData[key] !== undefined) {
       formData.append(key, serviceData[key]);
@@ -151,6 +171,7 @@ export const updateService = async (id, serviceData) => {
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/services/${id}`, {
     method: "PUT",
     headers: {
@@ -160,7 +181,9 @@ export const updateService = async (id, serviceData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -171,7 +194,9 @@ export const deleteService = async (id) => {
   return apiCall(`/services/${id}`, { method: "DELETE" });
 };
 
-// Testimonials API
+// ===============================
+// TESTIMONIALS API
+// ===============================
 export const fetchTestimonials = async () => {
   return apiCall("/testimonials");
 };
@@ -182,6 +207,7 @@ export const fetchTestimonial = async (id) => {
 
 export const createTestimonial = async (testimonialData) => {
   const formData = new FormData();
+
   Object.keys(testimonialData).forEach((key) => {
     if (testimonialData[key] !== null && testimonialData[key] !== undefined) {
       formData.append(key, testimonialData[key]);
@@ -189,6 +215,7 @@ export const createTestimonial = async (testimonialData) => {
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/testimonials`, {
     method: "POST",
     headers: {
@@ -198,7 +225,9 @@ export const createTestimonial = async (testimonialData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -207,6 +236,7 @@ export const createTestimonial = async (testimonialData) => {
 
 export const updateTestimonial = async (id, testimonialData) => {
   const formData = new FormData();
+
   Object.keys(testimonialData).forEach((key) => {
     if (testimonialData[key] !== null && testimonialData[key] !== undefined) {
       formData.append(key, testimonialData[key]);
@@ -214,6 +244,7 @@ export const updateTestimonial = async (id, testimonialData) => {
   });
 
   const token = getAuthToken();
+
   const response = await fetch(`${API_BASE_URL}/testimonials/${id}`, {
     method: "PUT",
     headers: {
@@ -223,7 +254,9 @@ export const updateTestimonial = async (id, testimonialData) => {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: "Request failed" }));
+    const error = await response
+      .json()
+      .catch(() => ({ message: "Request failed" }));
     throw new Error(error.message || "Request failed");
   }
 
@@ -234,7 +267,9 @@ export const deleteTestimonial = async (id) => {
   return apiCall(`/testimonials/${id}`, { method: "DELETE" });
 };
 
-// Auth API
+// ===============================
+// AUTH API
+// ===============================
 export const loginAdmin = async (email, password) => {
   return apiCall("/auth/login", {
     method: "POST",
