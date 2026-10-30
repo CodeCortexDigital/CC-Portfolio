@@ -1,7 +1,24 @@
 // ===============================
 // API BASE CONFIG
 // ===============================
-const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
+import { staticProjects, staticServices, staticTestimonials } from "../data/staticData";
+
+const API_ROOT = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = `${API_ROOT}/api`;
+
+// Read calls try the API first and fall back to the built-in content when the API
+// is not configured, unreachable, or returns an empty list.
+const withFallback = async (call, fallback) => {
+  if (!API_ROOT) return fallback;
+  try {
+    const data = await call();
+    if (Array.isArray(data) && data.length === 0) return fallback;
+    return data;
+  } catch {
+    return fallback;
+  }
+};
+const findIn = (list, id) => list.find((item) => item._id === id) || null;
 
 // ===============================
 // AUTH TOKEN HELPER
@@ -44,11 +61,11 @@ const apiCall = async (endpoint, options = {}) => {
 // PROJECTS API
 // ===============================
 export const fetchProjects = async () => {
-  return apiCall("/projects");
+  return withFallback(() => apiCall("/projects"), staticProjects);
 };
 
 export const fetchProject = async (id) => {
-  return apiCall(`/projects/${id}`);
+  return withFallback(() => apiCall(`/projects/${id}`), findIn(staticProjects, id));
 };
 
 export const createProject = async (projectData) => {
@@ -125,11 +142,11 @@ export const deleteProject = async (id) => {
 // SERVICES API
 // ===============================
 export const fetchServices = async () => {
-  return apiCall("/services");
+  return withFallback(() => apiCall("/services"), staticServices);
 };
 
 export const fetchService = async (id) => {
-  return apiCall(`/services/${id}`);
+  return withFallback(() => apiCall(`/services/${id}`), findIn(staticServices, id));
 };
 
 export const createService = async (serviceData) => {
@@ -198,7 +215,7 @@ export const deleteService = async (id) => {
 // TESTIMONIALS API
 // ===============================
 export const fetchTestimonials = async () => {
-  return apiCall("/testimonials");
+  return withFallback(() => apiCall("/testimonials"), staticTestimonials);
 };
 
 export const fetchTestimonial = async (id) => {
