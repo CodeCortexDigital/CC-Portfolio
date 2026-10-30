@@ -19,6 +19,10 @@ const ProjectCard = ({ project }) => {
     if (!project.image) {
       return getProjectImageUrl();
     }
+    // Illustrations that ship with the site
+    if (project.image.startsWith('/project-images/')) {
+      return project.image;
+    }
     // Check if it's an external URL
     if (project.image.startsWith('http://') || project.image.startsWith('https://')) {
       return project.image;

@@ -14,7 +14,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": true,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/cleanroute-ai.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/cleanroute-ai.html"
   },
   {
@@ -31,7 +31,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": true,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/erp-v2.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/erp-v2.html"
   },
   {
@@ -48,7 +48,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": true,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/cc-ims.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/cc-ims.html"
   },
   {
@@ -64,7 +64,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/safekid.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/safekid.html"
   },
   {
@@ -80,7 +80,7 @@ export const staticProjects = [
     "category": "web",
     "featured": false,
     "icon": "fas fa-code",
-    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/gas-elects-monitor.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/gas-elects-monitor.html"
   },
   {
@@ -96,7 +96,7 @@ export const staticProjects = [
     "category": "web",
     "featured": false,
     "icon": "fas fa-code",
-    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/task-manager.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/task-manager.html"
   },
   {
@@ -112,7 +112,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/smartmed-ai.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/smartmed-ai.html"
   },
   {
@@ -128,7 +128,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/careermind-ai.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/careermind-ai.html"
   },
   {
@@ -144,7 +144,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/scholarflow.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/scholarflow.html"
   },
   {
@@ -160,7 +160,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/plant-watering-system.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/plant-watering-system.html"
   },
   {
@@ -176,7 +176,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/foodguard-ai.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/foodguard-ai.html"
   },
   {
@@ -192,7 +192,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/cc-pos.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/cc-pos.html"
   },
   {
@@ -208,7 +208,7 @@ export const staticProjects = [
     "category": "ai",
     "featured": false,
     "icon": "fas fa-brain",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+    "image": "/project-images/industrial-ai.svg",
     "liveUrl": "https://www.codecortexdigital.com/projects/industrial-ai.html"
   }
 ];
