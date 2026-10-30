@@ -3085,3 +3085,24 @@ body {
   }
   }
   
+/* ===== Portfolio 2026 content blocks ===== */
+.hero-badge { display: inline-block; margin-bottom: 1rem; padding: .4rem 1rem; border-radius: 999px; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #fbbf24; background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.35); }
+.hero-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem 2.5rem; margin-top: 2.5rem; }
+.hero-stat { text-align: center; min-width: 120px; }
+.hero-stat strong { display: block; font-size: 2.2rem; font-weight: 800; line-height: 1.1; background: linear-gradient(90deg, #fbbf24, #ef4444); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-stat span { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: #94a3b8; }
+.about-stats { justify-content: flex-start; margin-top: 1.5rem; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.info-card { padding: 1.6rem; border-radius: 16px; background: rgba(30,41,59,.7); border: 1px solid rgba(251,191,36,.18); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.info-card:hover { transform: translateY(-4px); border-color: rgba(251,191,36,.5); box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+.info-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 1rem; color: #0f172a; background: linear-gradient(135deg, #fbbf24, #ef4444); font-size: 1.1rem; }
+.info-card h3 { margin: 0 0 .8rem; font-size: 1.1rem; color: #f8fafc; }
+.info-card ul { margin: 0; padding-left: 1.1rem; color: #94a3b8; font-size: .92rem; line-height: 1.7; }
+.info-card li + li { margin-top: .35rem; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.step-card { padding: 1.6rem; border-radius: 16px; background: rgba(30,41,59,.7); border: 1px solid rgba(255,255,255,.08); }
+.step-number { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; margin-bottom: .9rem; font-weight: 800; color: #0f172a; background: linear-gradient(135deg, #fbbf24, #ef4444); }
+.step-card h3 { margin: 0 0 .5rem; color: #f8fafc; }
+.step-card p { margin: 0; color: #94a3b8; font-size: .92rem; line-height: 1.6; }
+.confidentiality-note { margin-top: 1.5rem; text-align: center; font-style: italic; color: #94a3b8; }
+.ai-capabilities, .how-we-work { padding: 4rem 0; }

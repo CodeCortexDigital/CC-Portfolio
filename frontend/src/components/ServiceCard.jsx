@@ -26,7 +26,7 @@ const ServiceCard = ({ service }) => {
             <div className="service-features-section">
               <div className="features-header">
                 <i className="fas fa-list-check"></i>
-                <span>What's Included</span>
+                <span>{service.featuresLabel || "What's Included"}</span>
               </div>
               <ul className="service-features-grid">
                 {features.map((feature, idx) => (

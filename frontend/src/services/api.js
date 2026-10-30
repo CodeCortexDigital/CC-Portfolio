@@ -6,18 +6,9 @@ import { staticProjects, staticServices, staticTestimonials } from "../data/stat
 const API_ROOT = import.meta.env.VITE_API_BASE_URL;
 const API_BASE_URL = `${API_ROOT}/api`;
 
-// Read calls try the API first and fall back to the built-in content when the API
-// is not configured, unreachable, or returns an empty list.
-const withFallback = async (call, fallback) => {
-  if (!API_ROOT) return fallback;
-  try {
-    const data = await call();
-    if (Array.isArray(data) && data.length === 0) return fallback;
-    return data;
-  } catch {
-    return fallback;
-  }
-};
+// The portfolio shows the built-in content (kept in line with the Portfolio 2026 PDF).
+// The old content API no longer exists, so read calls do not depend on it.
+const withFallback = async (_call, fallback) => fallback;
 const findIn = (list, id) => list.find((item) => item._id === id) || null;
 
 // ===============================

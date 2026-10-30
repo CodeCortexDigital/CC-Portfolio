@@ -53,7 +53,7 @@ function Contact() {
               </div>
               <div className="contact-card-content">
                 <h3>Location</h3>
-                <span>Attock, Pakistan</span>
+                <span>Islamabad, Pakistan</span>
                 <span className="contact-subtext">Serving Clients Worldwide</span>
               </div>
             </div>

@@ -30,8 +30,8 @@ function Services() {
     <div className="services-page">
       <section id="services">
         <div className="section-title">
-          <h2>Our Core Services</h2>
-          <p>Comprehensive software development solutions tailored to your business needs</p>
+          <h2>Solutions for Your Industry</h2>
+          <p>Ready-to-adapt products, proven in real workflows, built to be customised to your business.</p>
         </div>
 
         {loading ? (
@@ -47,7 +47,7 @@ function Services() {
                 ))
               ) : (
                 <div className="empty-state">
-                  <p>No services available at the moment. Please add services through the admin panel.</p>
+                  <p>No solutions available at the moment.</p>
             </div>
               )}
             </Suspense>
