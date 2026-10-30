@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Research papers with magnifier and network">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fb7185" stop-opacity=".38"/><stop offset="1" stop-color="#fb7185" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+</defs>
+<rect width="800" height="600" fill="url(#bg)"/><rect width="800" height="600" fill="url(#grid)"/>
+<circle cx="400" cy="300" r="260" fill="url(#glow)"/>
+<g fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="230" y="140" width="230" height="300" rx="16" stroke="#f8fafc" stroke-opacity=".88" /><path d="M265 195h160M265 235h160M265 275h110M265 315h140" stroke="#fb7185" stroke-width="6"/>
+<circle cx="520" cy="360" r="62" stroke="#fb7185" /><path d="M565 405l50 50" stroke="#fb7185" /><circle cx="520" cy="360" r="14" stroke="#f8fafc" stroke-opacity=".88" />
+<circle cx="570" cy="180" r="14" stroke="#f8fafc" stroke-opacity=".88" /><circle cx="640" cy="240" r="14" stroke="#f8fafc" stroke-opacity=".88" /><circle cx="560" cy="270" r="14" stroke="#f8fafc" stroke-opacity=".88" /><path d="M570 180l70 60M570 180l-10 90M640 240l-80 30" stroke="#f8fafc"  stroke-opacity=".5" stroke-width="5"/>
+</g>
+</svg>

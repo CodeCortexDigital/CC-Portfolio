@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Utility gauge with lightning bolt">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#38bdf8" stop-opacity=".38"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+</defs>
+<rect width="800" height="600" fill="url(#bg)"/><rect width="800" height="600" fill="url(#grid)"/>
+<circle cx="400" cy="300" r="260" fill="url(#glow)"/>
+<g fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+
+<path d="M230 330a170 170 0 0 1 340 0" stroke="#38bdf8" /><path d="M250 330L272 330" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M270 255L289 266" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M325 200L336 219" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M400 180L400 202" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M475 200L464 219" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M530 255L511 266" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M550 330L528 330" stroke="#f8fafc" stroke-opacity=".88" stroke-width="6"/><path d="M400 330L480 230" stroke="#f8fafc" stroke-opacity=".88" /><circle cx="400" cy="330" r="16" stroke="#38bdf8" />
+<path d="M410 380l-40 70h40l-16 62 70-86h-44l22-46z" stroke="#38bdf8" /><path d="M250 470h120M450 470h100" stroke="#f8fafc"  stroke-opacity=".45"/>
+</g>
+</svg>
