@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>CODE CORTEX</h3>
-          <p>Delivering innovative software solutions that drive business transformation, and digital growth.</p>
+          <p>AI-First Software Studio. Intelligent Products. Enterprise Platforms. Real AI.</p>
           <div className="social-links">
             <a href="https://www.linkedin.com/in/code-cortex/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
@@ -35,13 +35,14 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h4>Services</h4>
+          <h4>Industries</h4>
           <ul>
-            <li><a href="/services">Web Development</a></li>
-            <li><a href="/services">Mobile Applications</a></li>
-            <li><a href="/services">AI & ML Solutions</a></li>
-            <li><a href="/services">Cloud & DevOps</a></li>
-            <li><a href="/services">Technology Consulting</a></li>
+            <li><a href="/services">Education</a></li>
+            <li><a href="/services">Enterprise &amp; Services</a></li>
+            <li><a href="/services">Retail</a></li>
+            <li><a href="/services">Smart City &amp; Utilities</a></li>
+            <li><a href="/services">Manufacturing</a></li>
+            <li><a href="/services">Transport &amp; Mobility</a></li>
           </ul>
         </div>
 
@@ -58,7 +59,7 @@ const Footer = () => {
             </p>
             <p>
               <i className="fas fa-map-marker-alt" style={{ marginRight: "0.5rem", color: "#fbbf24" }}></i>
-              <span style={{ color: "#94a3b8" }}>Attock, Pakistan</span>
+              <span style={{ color: "#94a3b8" }}>Islamabad, Pakistan</span>
             </p>
           </div>
         </div>

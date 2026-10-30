@@ -1,6 +1,9 @@
 import { lazy, Suspense, useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";
+import InfoGrid from "../components/InfoGrid";
+import HowWeWork from "../components/HowWeWork";
+import { whyUs, aiCapabilities } from "../data/content";
 import { fetchServices, fetchProjects } from "../services/api";
 
 const ServiceCard = lazy(() => import("../components/ServiceCard"));
@@ -57,8 +60,8 @@ function Home() {
       <section className="services-preview">
         <div className="container">
           <div className="section-title">
-            <h2>Our Core Services</h2>
-            <p>Comprehensive software development solutions tailored to your business needs</p>
+            <h2>Solutions for Your Industry</h2>
+            <p>Ready-to-adapt products, proven in real workflows, built to be customised to your business.</p>
           </div>
           <div className="horizontal-scroll-wrapper">
             <button 
@@ -77,7 +80,7 @@ function Home() {
                     ))
                   ) : (
                     <div className="empty-state">
-                      <p>Services coming soon...</p>
+                      <p>Solutions coming soon...</p>
                     </div>
                   )}
                 </Suspense>
@@ -93,7 +96,7 @@ function Home() {
           </div>
           <div className="section-cta">
             <button onClick={() => navigate("/services")} className="btn-primary">
-              View All Services
+              View All Industries
             </button>
           </div>
         </div>
@@ -103,8 +106,8 @@ function Home() {
       <section className="projects-preview">
         <div className="container">
           <div className="section-title">
-            <h2>Featured Projects</h2>
-            <p>A glimpse into our successful software implementations</p>
+            <h2>Our Products</h2>
+            <p>Built in-house, proven in real workflows.</p>
           </div>
           <div className="horizontal-scroll-wrapper">
             <button 
@@ -145,57 +148,35 @@ function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Companies Choose Code Cortex */}
       <section className="why-choose-us" id="about">
         <div className="container">
           <div className="section-title">
-            <h2>Why Choose Us</h2>
-            <p>What sets us apart from the competition</p>
+            <h2>Why Companies Choose Code Cortex</h2>
           </div>
-          <div className="features-grid">
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=150&h=150&fit=crop&q=80" alt="Fast Delivery" />
-              </div>
-              <h3>Fast Delivery</h3>
-              <p>We deliver projects on time without compromising quality</p>
-            </div>
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=150&h=150&fit=crop&q=80" alt="Innovative Solutions" />
-              </div>
-              <h3>Innovative Solutions</h3>
-              <p>Cutting-edge technology and creative problem-solving</p>
-            </div>
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&q=80" alt="Client Focused" />
-              </div>
-              <h3>Client Focused</h3>
-              <p>Your success is our priority - we work closely with you</p>
-            </div>
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=150&h=150&fit=crop&q=80" alt="Secure & Reliable" />
-              </div>
-              <h3>Secure & Reliable</h3>
-              <p>Enterprise-grade security and 99.9% uptime guarantee</p>
-            </div>
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&q=80" alt="Expert Team" />
-              </div>
-              <h3>Expert Team</h3>
-              <p>Experienced developers and designers at your service</p>
-            </div>
-            <div className="feature-card fade-in">
-              <div className="feature-icon">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150&h=150&fit=crop&q=80" alt="Scalable Solutions" />
-              </div>
-              <h3>Scalable Solutions</h3>
-              <p>Build for growth - solutions that scale with your business</p>
-            </div>
+          <InfoGrid items={whyUs} />
+        </div>
+      </section>
+
+      {/* AI Capabilities */}
+      <section className="ai-capabilities">
+        <div className="container">
+          <div className="section-title">
+            <h2>AI Capabilities</h2>
+            <p>Practical machine learning that solves business problems.</p>
           </div>
+          <InfoGrid items={aiCapabilities} />
+        </div>
+      </section>
+
+      {/* How We Work With You */}
+      <section className="how-we-work">
+        <div className="container">
+          <div className="section-title">
+            <h2>How We Work With You</h2>
+            <p>A low-risk path from idea to production.</p>
+          </div>
+          <HowWeWork />
         </div>
       </section>
 
@@ -203,8 +184,8 @@ function Home() {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's discuss how we can help bring your vision to life</p>
+            <h2>Let's Build Something Intelligent</h2>
+            <p>info@codecortexdigital.com · +92 315 722 7688 · Islamabad, Pakistan</p>
             <button onClick={() => navigate("/contact")} className="btn-primary-large">
               Get In Touch
             </button>
