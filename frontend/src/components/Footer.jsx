@@ -8,16 +8,16 @@ const Footer = () => {
           <h3>CODE CORTEX</h3>
           <p>Delivering innovative software solutions that drive business transformation, and digital growth.</p>
           <div className="social-links">
-            <a href="https://www.linkedin.com/in/code-cortex-a8188b379/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/code-cortex/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/codecortexdigital" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/CodeCortexDigital" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://twitter.com/codecortex" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
+            <a href="https://x.com/CodeCortexpk" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <i className="fab fa-x-twitter"></i>
             </a>
-            <a href="https://www.facebook.com/codecortex" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61579583993304" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <i className="fab fa-facebook"></i>
             </a>
           </div>
